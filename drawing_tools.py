@@ -61,7 +61,7 @@ def mw_triangulate(points):
 # =========================================
 root = Tk()
 root.title("Points")
-root.geometry(str(YSIZE)+'x'+str(YSIZE))
+root.geometry(str(2*YSIZE)+'x'+str(YSIZE))
 
 canvas = Canvas(root, width=2*YSIZE, height=YSIZE, bg='#FFF', highlightbackground="#999")
 canvas.bind("<Button-1>", DrawHull)
@@ -73,9 +73,7 @@ ctrY = 400
 aveRadius = 300
 irregularity = 1
 spikeyness = 0
-numVerts = 10
-
-print(YSIZE)
+numVerts = 17
 
 [points_1, points_2] = generatePolygon(ctrX, ctrY, aveRadius, irregularity, spikeyness, numVerts)
 
